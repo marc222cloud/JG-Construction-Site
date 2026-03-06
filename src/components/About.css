@@ -1,0 +1,73 @@
+/* ===== About ===== */
+.about {
+  background: #1a1a1a;
+  padding: 64px 0;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.about-text h2 {
+  margin: 0 0 20px;
+  font-size: clamp(34px, 4vw, 52px);
+  line-height: 1.05;
+  font-weight: 500;
+  color: #ffffff;
+  text-align: center;
+}
+
+.about-text p {
+  margin: 0 0 18px;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #e5e5e5;
+  max-width: 60ch;
+}
+
+.about-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+}
+
+@media (max-width: 900px) {
+  .about {
+    padding: 48px 0;
+  }
+
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 0 20px;
+  }
+
+  .about-text h2 {
+    font-size: clamp(28px, 7vw, 40px);
+  }
+
+  .about-text p {
+    font-size: 16px;
+    max-width: none;
+  }
+
+  .about-image img {
+    max-width: 100%;
+  }
+}
