@@ -1,9 +1,11 @@
-
-
 /* ===== Navbar ===== */
 .navbar {
   background: #000;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 5000;
+  isolation: isolate;
 }
 
 .navbar-inner {
@@ -53,11 +55,13 @@
   position: relative;
   display: flex;
   align-items: center;
+  z-index: 5001;
+  overflow: visible;
 }
 
 .dropdown-menu {
   position: absolute;
-  top: 100%;
+  top: calc(100% + 8px);
   left: 0;
   background: #111;
   display: flex;
@@ -69,7 +73,8 @@
   visibility: hidden;
   transform: translateY(8px);
   transition: all 0.2s ease;
-  z-index: 1000;
+  z-index: 6000;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
 }
 
 .dropdown-menu a {
@@ -87,6 +92,10 @@
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
+}
+
+.services-dropdown:hover {
+  z-index: 6001;
 }
 
 /* Phone button */
