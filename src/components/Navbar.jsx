@@ -15,7 +15,21 @@ export default function Navbar() {
         {/* Navigation Links */}
         <nav className="nav-links">
           <NavLink to="/about">About</NavLink>
-          <NavLink to="/services/siding">Services</NavLink>
+
+          <div className="services-dropdown">
+            <NavLink to="/services/siding" className="services-link">
+              Services
+            </NavLink>
+
+            <div className="dropdown-menu">
+              <NavLink to="/services/siding">Siding</NavLink>
+              <NavLink to="/services/roofing">Roofing</NavLink>
+              <NavLink to="/services/storm-damage">Storm Damage</NavLink>
+              <NavLink to="/services/kitchen">Kitchen</NavLink>
+              <NavLink to="/services/general-contracting">General Contracting</NavLink>
+            </div>
+          </div>
+
           <NavLink to="/book">Book</NavLink>
         </nav>
 

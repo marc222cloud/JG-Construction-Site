@@ -29,27 +29,29 @@ export default function EstimateForm({ serviceName = "Estimate" }) {
   async function onSubmit(e) {
     e.preventDefault();
     const err = validate();
+
     if (err) {
       setStatus({ type: "error", message: err });
       return;
     }
 
-    // TODO: Replace with real email/API later
-    setStatus({ type: "success", message: "Request sent! We'll reach out soon." });
+    // TODO: connect to backend/API later
+    setStatus({ type: "success", message: `${serviceName} request sent! We'll reach out soon.` });
     setForm(initial);
   }
 
   return (
-    <section style={styles.card} aria-label="Get a free estimate">
-      <div style={styles.titleWrap}>
+    <section style={styles.card} aria-label={`Get a free estimate for ${serviceName}`}>
+      <div style={styles.header}>
         <div style={styles.kicker}>GET A FREE ESTIMATE</div>
-        <div style={styles.serviceName}>{serviceName}</div>
       </div>
 
       <form onSubmit={onSubmit} style={styles.form}>
         <div style={styles.row}>
           <div style={styles.field}>
-            <label style={styles.label}>First Name <span style={styles.req}>(required)</span></label>
+            <label style={styles.label}>
+              First Name: <span style={styles.req}>(required)</span>
+            </label>
             <input
               name="firstName"
               value={form.firstName}
@@ -60,7 +62,9 @@ export default function EstimateForm({ serviceName = "Estimate" }) {
           </div>
 
           <div style={styles.field}>
-            <label style={styles.label}>Last Name <span style={styles.req}>(required)</span></label>
+            <label style={styles.label}>
+              Last Name: <span style={styles.req}>(required)</span>
+            </label>
             <input
               name="lastName"
               value={form.lastName}
@@ -72,7 +76,9 @@ export default function EstimateForm({ serviceName = "Estimate" }) {
         </div>
 
         <div style={styles.field}>
-          <label style={styles.label}>Email <span style={styles.req}>(required)</span></label>
+          <label style={styles.label}>
+            Email: <span style={styles.req}>(required)</span>
+          </label>
           <input
             name="email"
             value={form.email}
@@ -84,7 +90,9 @@ export default function EstimateForm({ serviceName = "Estimate" }) {
         </div>
 
         <div style={styles.field}>
-          <label style={styles.label}>Phone Number <span style={styles.req}>(required)</span></label>
+          <label style={styles.label}>
+            Phone Number: <span style={styles.req}>(required)</span>
+          </label>
           <input
             name="phone"
             value={form.phone}
@@ -96,13 +104,15 @@ export default function EstimateForm({ serviceName = "Estimate" }) {
         </div>
 
         <div style={styles.field}>
-          <label style={styles.label}>What can we help you with? <span style={styles.req}>(required)</span></label>
+          <label style={styles.label}>
+            What can we help you with? <span style={styles.req}>(required)</span>
+          </label>
           <textarea
             name="message"
             value={form.message}
             onChange={update}
             style={styles.textarea}
-            rows={4}
+            rows={5}
           />
         </div>
 
@@ -110,7 +120,7 @@ export default function EstimateForm({ serviceName = "Estimate" }) {
           <div
             style={{
               ...styles.status,
-              borderColor: status.type === "error" ? "#ff4d4d" : "#3ddc84",
+              borderColor: status.type === "error" ? "#ff6b6b" : "#57d38c",
             }}
           >
             {status.message}
@@ -127,71 +137,82 @@ export default function EstimateForm({ serviceName = "Estimate" }) {
 
 const styles = {
   card: {
-    background: "#1f1f1f",
-    color: "white",
-    padding: 18,
-    borderRadius: 6,
-  },
-  titleWrap: {
+    background: "#202020",
+    color: "#f2f2f2",
+    padding: "36px 34px 30px",
+    minHeight: "100%",
     display: "flex",
-    alignItems: "baseline",
-    justifyContent: "space-between",
-    gap: 10,
-    marginBottom: 12,
+    flexDirection: "column",
+    justifyContent: "flex-start",
+  },
+  header: {
+    marginBottom: 22,
   },
   kicker: {
-    fontSize: 12,
-    letterSpacing: 1.2,
-    opacity: 0.85,
-  },
-  serviceName: {
-    fontSize: 18,
-    fontWeight: 700,
+    fontSize: 16,
+    letterSpacing: 2,
+    fontWeight: 500,
+    fontFamily:
+      'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
   },
   form: {
     display: "flex",
     flexDirection: "column",
-    gap: 12,
+    gap: 18,
   },
   row: {
     display: "grid",
     gridTemplateColumns: "1fr 1fr",
-    gap: 10,
+    gap: 14,
   },
-  field: { display: "flex", flexDirection: "column", gap: 6 },
-  label: { fontSize: 12, opacity: 0.9 },
-  req: { fontSize: 11, opacity: 0.7 },
+  field: {
+    display: "flex",
+    flexDirection: "column",
+    gap: 8,
+  },
+  label: {
+    fontSize: 14,
+    color: "#f2f2f2",
+  },
+  req: {
+    fontSize: 12,
+    color: "#b7b7b7",
+  },
   input: {
-    padding: "10px 10px",
-    borderRadius: 4,
-    border: "1px solid #444",
-    background: "#e9e9e9",
-    color: "#111",
+    width: "100%",
+    height: 38,
+    padding: "8px 10px",
+    border: "none",
     outline: "none",
+    background: "#d9d9d9",
+    color: "#111",
+    borderRadius: 0,
   },
   textarea: {
-    padding: "10px 10px",
-    borderRadius: 4,
-    border: "1px solid #444",
-    background: "#e9e9e9",
-    color: "#111",
+    width: "100%",
+    minHeight: 116,
+    padding: "10px",
+    border: "none",
     outline: "none",
+    background: "#d9d9d9",
+    color: "#111",
+    borderRadius: 0,
     resize: "vertical",
   },
   button: {
-    marginTop: 4,
-    padding: "10px 12px",
-    borderRadius: 6,
+    marginTop: 8,
+    alignSelf: "flex-start",
+    padding: "12px 18px",
     border: "none",
     cursor: "pointer",
-    background: "#d12020",
-    color: "white",
+    borderRadius: 4,
+    background: "#f1c34a",
+    color: "#111",
     fontWeight: 700,
   },
   status: {
     border: "1px solid",
     padding: 10,
-    borderRadius: 6,
     fontSize: 13,
     background: "rgba(255,255,255,0.04)",
   },

@@ -1,16 +1,19 @@
+import { Routes, Route, Navigate } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
-import Hero from "./components/Hero";
-import Services from "./components/Services"
-import About from "./components/About";
+import Siding from "./pages/Siding";
 
 export default function App() {
   return (
     <div className="app">
       <Navbar />
       <main className="main">
-        <Home />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/services/siding" element={<Siding />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
       </main>
       <Footer />
     </div>
