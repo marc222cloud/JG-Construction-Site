@@ -17,9 +17,9 @@ export default function Navbar() {
           <NavLink to="/about">About</NavLink>
 
           <div className="services-dropdown">
-            <NavLink to="/services/siding" className="services-link">
+            <span className="services-link">
               Services
-            </NavLink>
+            </span>
 
             <div className="dropdown-menu">
               <NavLink to="/services/siding">Siding</NavLink>

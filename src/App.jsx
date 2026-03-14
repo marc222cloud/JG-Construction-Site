@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Siding from "./pages/Siding";
 import Roofing from "./pages/Roofing";
 import Bathroom from "./pages/Bathroom";
+import Kitchen from "./pages/Kitchen";
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
           <Route path="/services/siding" element={<Siding />} />
           <Route path="/services/roofing" element={<Roofing />} />
           <Route path="/services/bathroom" element={<Bathroom />} />
+          <Route path="/services/kitchen" element={<Kitchen />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>
