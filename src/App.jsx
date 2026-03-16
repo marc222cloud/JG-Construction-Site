@@ -8,6 +8,7 @@ import Bathroom from "./pages/Bathroom";
 import Kitchen from "./pages/Kitchen";
 import StormDamage from "./pages/StormDamage";
 import General from "./pages/General";
+import Aboutus from "./pages/Aboutus";
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
       <main className="main">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/about" element={<Aboutus />} />
           <Route path="/services/siding" element={<Siding />} />
           <Route path="/services/roofing" element={<Roofing />} />
           <Route path="/services/bathroom" element={<Bathroom />} />
