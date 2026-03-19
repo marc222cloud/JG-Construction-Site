@@ -1,6 +1,7 @@
 import EstimateForm from "../components/EstimateForm";
 import Testimonials from "../components/Testimonials";
 import bathroomHero from "../assets/bathroom.jpg";
+import bathroomDetail from "../assets/bathroom2.avif";
 import "./Bathroom.css";
 
 export default function Bathroom() {
@@ -37,6 +38,29 @@ export default function Bathroom() {
             planning a full renovation, our team delivers results you'll love
             for years to come.
           </p>
+        </div>
+      </section>
+
+      <section className="service-detail">
+        <div className="service-detail__container">
+          <div className="service-detail__image-wrap">
+            <img
+              src={bathroomDetail}
+              alt="Luxury freestanding bathtub in modern bathroom"
+              className="service-detail__image"
+            />
+
+            <div className="service-detail__card">
+              <h3>Large & Small Bathroom Remodeling</h3>
+              <p>
+                Backed by over 20 years of industry experience, our team brings
+                expert craftsmanship and attention to detail to every bathroom
+                project. We work closely with homeowners to design practical
+                layouts, select quality materials, and deliver professional
+                results that stand the test of time.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
