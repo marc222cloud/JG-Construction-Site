@@ -3,6 +3,7 @@
 import EstimateForm from "../components/EstimateForm";
 import Testimonials from "../components/Testimonials";
 import roofingHero from "../assets/roofing.jpg";
+import roofingDetail from "../assets/roof2.jpg";
 import "./Roofing.css";
 
 export default function Roofing() {
@@ -39,6 +40,29 @@ export default function Roofing() {
             every season. Our team focuses on dependable workmanship, clean
             installation, and results built to last.
           </p>
+        </div>
+      </section>
+
+      <section className="service-detail">
+        <div className="service-detail__container">
+          <div className="service-detail__image-wrap">
+            <img
+              src={roofingDetail}
+              alt="Residential asphalt shingle roof"
+              className="service-detail__image"
+            />
+
+            <div className="service-detail__card">
+              <h3>Your Local Go-To Roofers</h3>
+              <p>
+                Backed by over 20 years of industry experience, our team understands
+                what it takes to build and maintain a dependable roofing system. We
+                assess your roof thoroughly, provide honest recommendations, and
+                complete every job with clean, professional results that stand the
+                test of time.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
