@@ -1,5 +1,5 @@
 import teamworking from "../assets/teamworking.jpeg";
-import "./AboutUs.css";
+import "./Aboutus.css";
 
 export default function AboutUs() {
   return (
