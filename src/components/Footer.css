@@ -1,5 +1,3 @@
-
-
 /* ===== Footer ===== */
 .footer {
   background: #000;
@@ -15,7 +13,6 @@
 }
 
 .footer__brand {
-  color: #e53935;
   font-size: clamp(24px, 2.8vw, 40px);
   line-height: 1.05;
   letter-spacing: 1px;
@@ -24,19 +21,28 @@
     "Liberation Mono", "Courier New", monospace;
 
   white-space: nowrap;
+  font-weight: 550;
+}
+
+.footer__brand span {
+  color: #e53935;
+}
+
+.footer__brand {
+  color: #f2f2f2;
 }
 
 .footer__cols {
   display: flex;
-  gap: 96px;
+  gap: 120px;
   align-items: flex-start;
 }
 
 .footer__cols h4 {
   margin: 0 0 12px;
   font-size: 22px;
-  font-weight: 500;
-  color: #e53935;
+  font-weight: 400;
+  color: #f2f2f2;
   letter-spacing: 0.5px;
 
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
@@ -49,13 +55,14 @@
   margin: 8px 0;
   font-size: 20px;
   line-height: 1.25;
-  color: #f2f2f2;
-  opacity: 0.92;
+  color: #e53935;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  opacity: 0.95;
 }
 
 .footer__cols a:hover {
-  text-decoration: underline;
-  text-underline-offset: 6px;
+  color: #ff4d42;
   opacity: 1;
 }
 
@@ -72,6 +79,7 @@
   display: block;
   object-fit: contain;
   margin-top: 10px;
+  opacity: 0.85;
 }
 
 /* ===== Responsive ===== */
