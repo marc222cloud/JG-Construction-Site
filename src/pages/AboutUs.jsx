@@ -1,7 +1,7 @@
 import teamworking from "../assets/teamworking.jpeg";
 import "./Aboutus.css";
 
-export default function AboutUs() {
+export default function Aboutus() {
   return (
     <main className="about-page">
       <section className="about-page__hero">
