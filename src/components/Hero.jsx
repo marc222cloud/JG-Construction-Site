@@ -12,7 +12,7 @@ export default function Hero() {
       <div className="hero__overlay" />
 
       <div className="hero-content">
-        <h1>J&G Construction</h1>
+        <h1>GFX Construction</h1>
         <h3 className="hero-location">Yorkville</h3>
         <p>Delivering refined improvements to homes and helping restore the integrity and value of private properties. Book with us today!</p>
 

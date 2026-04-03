@@ -36,7 +36,7 @@ export default function General() {
           <h2>Best Local Contractors</h2>
           <p>
             Whether you’re planning a home addition, renovation, or new
-            construction project, J&amp;G Construction provides dependable
+            construction project, GFX Construction provides dependable
             general contracting services backed by over 20 years of experience.
             We manage every phase of your project with clear communication,
             skilled craftsmanship, and attention to detail.

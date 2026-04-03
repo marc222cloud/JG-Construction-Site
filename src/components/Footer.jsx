@@ -1,10 +1,10 @@
 import "./Footer.css";
-import logo from "../assets/J&GLogo.png";
+import logo from "../assets/GFXLogo.png";
 export default function Footer() {
   return (
     <footer className="footer">
       <div className="footer__brand">
-        <span>J &amp; G</span> Construction
+        <span>GFX</span> Construction
       </div>
 
       <div className="footer__cols">
@@ -22,7 +22,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            18 6th St, Yorkville, NY 13495
+            2021 Sunset Ave, Utica, NY 13502
           </a>
           <a href="mailto:Garciajuan4012@gmail.com">Garciajuan4012@gmail.com</a>
           <a href="tel:3159823057">(315) 982-3057</a>
@@ -32,7 +32,7 @@ export default function Footer() {
       {/* Logo on right */}
       <div className="footer__logo">
         <a href="/">
-          <img src={logo} alt="J & G Construction logo" />
+          <img src={logo} alt="GFX Construction logo" />
         </a>
       </div>
     </footer>

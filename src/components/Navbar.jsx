@@ -1,6 +1,6 @@
 import "./Navbar.css";
 import { NavLink } from "react-router-dom";
-import logo from "../assets/J&GLogo.png";
+import logo from "../assets/GFXLogo.png";
 
 export default function Navbar() {
   return (
@@ -13,7 +13,7 @@ export default function Navbar() {
   className="logo"
   onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
 >
-  <img src={logo} alt="J & G Construction" className="logo-img" />
+  <img src={logo} alt="GFX Construction" className="logo-img" />
 </NavLink>
 
         {/* Navigation Links */}

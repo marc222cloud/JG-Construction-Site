@@ -10,11 +10,11 @@ export default function Contact() {
         <div className="contact-page__container">
           <div className="contact-page__left">
             <h1 className="contact-page__title">
-              <span>J&amp;G</span> Construction
+              <span>GFX </span> Construction
             </h1>
 
             <p className="contact-page__intro">
-              J &amp; G Construction proudly serves homeowners throughout
+              GFX Construction proudly serves homeowners throughout
               Yorkville, Utica, and the surrounding areas. Whether you&apos;re
               planning a renovation, repair, or new project, our team is ready
               to help. Fill out the form below and we&apos;ll get back to you as
@@ -36,9 +36,9 @@ export default function Contact() {
             </div>
 
             <div className="contact-page__info-block">
-              <p>J&amp;G Construction</p>
-              <p>18 6th St</p>
-              <p>Yorkville, NY 13495</p>
+              <p>GFX Construction</p>
+              <p>2021 Sunset Ave</p>
+              <p>Utica, NY 13502</p>
             </div>
 
             <div className="contact-page__info-block">

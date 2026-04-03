@@ -8,7 +8,7 @@ export default function About() {
         <div className="about-text">
           <h2>About Us</h2>
           <p>
-            J & G Construction is a family‑run contractor serving the local
+            GFX Construction is a family‑run contractor serving the local
             community with over 20 years of experience in home improvement and
             general contracting. Our goal is simple: deliver reliable work,
             honest communication, and results homeowners can trust.
@@ -24,7 +24,7 @@ export default function About() {
         <div className="about-image">
           <img
             src={teamworking}
-            alt="J & G Construction team working on a home"
+            alt="GFX Construction team working on a home"
           />
         </div>
       </div>
