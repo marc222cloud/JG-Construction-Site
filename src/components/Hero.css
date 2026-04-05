@@ -9,7 +9,7 @@
   content: "";
   flex: 1;
   background-size: cover;
-  background-position: center;
+  background-position: center top;
   background-repeat: no-repeat;
 }
 
@@ -35,8 +35,8 @@
 .hero-location {
   align-self: flex-start;
   text-align: left;
-  margin-left: 380px;
-  margin-top: -px;
+  margin-left: 35px;
+  margin-top: 10px;
   font-size: 20px;
   font-weight: 600;
   color: #dcdcdc;
@@ -67,11 +67,31 @@
   }
 
   .hero::before {
-    height: 300px;
+    flex: none;
+    width: 100%;
+    min-height: 320px;
+    background-size: contain;
+    background-position: center top;
+    background-color: transparent;
   }
 
   .hero-content {
     padding: 40px 24px;
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+    margin-left: 0;
+  }
+
+  .hero-content p {
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+  .hero-location {
+    margin-left: 0;
+    margin-top: 8px;
   }
 
   .hero-location,
